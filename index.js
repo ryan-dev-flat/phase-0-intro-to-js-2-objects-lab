@@ -1,18 +1,20 @@
 // Define the 'employee' object
 let employee = {
-    name: "Employee Name",
-    streetAddress: "123 Main St"
-};
+    name: "Sam",
+    streetAddress: "11 Broadway"
+}
 
 // Define the 'updateEmployeeWithKeyAndValue()' function
 function updateEmployeeWithKeyAndValue(employee, key, value) {
-    return { ...employee, [key]: value };
+    let newEmployee = { ...employee }
+    newEmployee[key] = value;
+    return newEmployee
 }
 
 // Define the 'destructivelyUpdateEmployeeWithKeyAndValue()' function
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
-    employee[key] = value;
-    return employee;
+    employee[key] = value
+    return employee
 }
 
 // Define the 'deleteFromEmployeeByKey()' function
